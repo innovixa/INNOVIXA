@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030816">
+  <meta name="description" content="INNOVIXA — Learn, Build, Innovate. Explore technology, robotics, tutorials and apps.">
+  <title>INNOVIXA — Learn • Build • Innovate</title>
+  <link rel="icon" type="image/png" href="assets/innovixa-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="robot-backdrop" aria-hidden="true"></div>
+  <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause background animation">Ⅱ Pause animation</button>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home"><img src="assets/innovixa-logo.png" alt="INNOVIXA logo"><span>INNOVI<span class="cyan">XA</span></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="videos.html">Videos</a><a href="projects.html">Projects</a><a href="about.html">About</a>
+      <a class="nav-cta" href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">Subscribe ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> IDEAS INTO INNOVATION</div>
+        <h1>Learn. Build.<br><span class="gradient-text">Innovate.</span></h1>
+        <p class="hero-lead">Welcome to INNOVIXA — your space to explore technology, discover robotics, learn through tutorials and build useful digital experiences.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#videos">Explore videos <span>→</span></a>
+          <a class="button secondary" href="projects.html">Discover projects</a>
+        </div>
+        <div class="hero-tags"><span>TECH</span><i></i><span>ROBOTICS</span><i></i><span>TUTORIALS</span><i></i><span>APPS</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="logo-frame"><img src="assets/innovixa-logo.png" alt="INNOVIXA — Learn Build Innovate"></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="float-chip chip-top">✦ CREATE</div><div class="float-chip chip-bottom">⌘ EXPLORE</div>
+      </div>
+      <a class="scroll-cue" href="#videos">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-heading"><div><div class="eyebrow">FROM THE CHANNEL</div><h2>Latest <span class="gradient-text">videos</span></h2><p>Fresh uploads from the INNOVIXA YouTube channel.</p></div><a class="text-link" href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">Visit YouTube ↗</a></div>
+      <div id="video-grid" class="video-grid"><div class="loading-card">Loading latest videos<span class="loading-dots">...</span></div></div>
+    </section>
+
+  </main>
+
+  <footer><a class="footer-brand" href="#home">INNOVI<span class="cyan">XA</span></a><p>LEARN <b>•</b> BUILD <b>•</b> INNOVATE</p><div class="footer-links"><a href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">YouTube</a><a href="https://whatsapp.com/channel/0029Vb9S3fqEFeXifUevcA2J" target="_blank" rel="noopener">WhatsApp Channel</a><a href="https://www.instagram.com/innovixaa/" target="_blank" rel="noopener">Instagram</a><a href="#home">Back to top ↑</a></div><small>© <span id="year"></span> INNOVIXA. Built for curious minds.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
