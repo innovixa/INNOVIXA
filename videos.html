@@ -1,39 +1,291 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
   <title>Videos | INNOVIXA</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#030816">
-  <link rel="icon" type="image/png" href="assets/innovixa-logo.png">
+
+  <meta name="description"
+        content="Watch INNOVIXA robotics, AI, ML, coding tutorials, YouTube videos and Shorts.">
+
+  <link rel="icon"
+        type="image/png"
+        href="assets/innovixa-logo.png">
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .video-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .video-filter {
+      padding: 11px 22px;
+      border-radius: 30px;
+      border: 1px solid rgba(0,220,255,.3);
+      background: rgba(0,220,255,.06);
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .video-filter.active {
+      background: #00cfff;
+      color: #030816;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .video-card {
+      overflow: hidden;
+      border-radius: 16px;
+      background: rgba(12,25,48,.9);
+      border: 1px solid rgba(0,220,255,.15);
+      transition: transform .25s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #101c30;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-type {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 6px 12px;
+      background: #00cfff;
+      color: #030816;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .video-info {
+      padding: 17px;
+    }
+
+    .video-info h3 {
+      color: white;
+      font-size: 16px;
+      margin: 0 0 10px;
+    }
+
+    .video-date {
+      color: #9baec7;
+      font-size: 13px;
+    }
+
+    .video-watch {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 9px 17px;
+      background: #00cfff;
+      color: #030816;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .loading-card,
+    .empty-card {
+      color: #a9c3d9;
+      padding: 30px;
+      text-align: center;
+      grid-column: 1 / -1;
+    }
+  </style>
 </head>
+
 <body>
+
   <div class="robot-backdrop" aria-hidden="true"></div>
-  <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause background animation">Ⅱ Pause animation</button>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+
+  <button class="motion-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Pause background animation">
+    Ⅱ Pause animation
+  </button>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
   <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/innovixa-logo.png" alt="INNOVIXA logo"><span>INNOVI<span class="cyan">XA</span></span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <a class="brand" href="index.html">
+      <img src="assets/innovixa-logo.png"
+           alt="INNOVIXA logo">
+
+      <span>INNOVI<span class="cyan">XA</span></span>
+    </a>
+
+    <button class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      ☰
+    </button>
+
     <nav id="nav">
-      <a href="index.html">Home</a><a href="videos.html">Videos</a><a href="projects.html">Projects</a><a href="index.html#tutorials">Tutorials</a><a href="about.html">About</a>
-      <a class="nav-cta" href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">Subscribe ↗</a>
+      <a href="index.html">Home</a>
+      <a href="videos.html">Videos</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#tutorials">Tutorials</a>
+      <a href="about.html">About</a>
+
+      <a class="nav-cta"
+         href="https://www.youtube.com/@INNOVIXA"
+         target="_blank"
+         rel="noopener">
+        Subscribe ↗
+      </a>
     </nav>
+
   </header>
 
   <main>
+
     <section class="section page-hero">
-      <div class="eyebrow">WATCH • LEARN • CREATE</div>
-      <h1>INNOVIXA <span class="gradient-text">videos</span></h1>
-      <p class="hero-lead">Explore the latest uploads from our YouTube channel. New videos appear here automatically when the channel sync runs.</p>
-      <div class="hero-actions"><a class="button primary" href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">Visit YouTube ↗</a><a class="button secondary" href="index.html">Back home</a></div>
+
+      <div class="eyebrow">
+        WATCH • LEARN • CREATE
+      </div>
+
+      <h1>
+        INNOVIXA
+        <span class="gradient-text">videos</span>
+      </h1>
+
+      <p class="hero-lead">
+        Explore robotics, AI, machine learning,
+        coding tutorials, regular videos and Shorts.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="button primary"
+           href="https://www.youtube.com/@INNOVIXA"
+           target="_blank"
+           rel="noopener">
+          Visit YouTube ↗
+        </a>
+
+        <a class="button secondary"
+           href="index.html">
+          Back home
+        </a>
+
+      </div>
+
     </section>
+
     <section class="section sub-section">
-      <div class="section-heading"><div><div class="eyebrow">LATEST UPLOADS</div><h2>Latest <span class="gradient-text">videos</span></h2><p>Fresh content from INNOVIXA.</p></div></div>
-      <div id="video-grid" class="video-grid"><div class="loading-card">Loading latest videos...</div></div>
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">LATEST UPLOADS</div>
+
+          <h2>
+            Latest
+            <span class="gradient-text">videos</span>
+          </h2>
+
+          <p>Fresh content from INNOVIXA.</p>
+        </div>
+
+      </div>
+
+      <div class="video-filters">
+
+        <button class="video-filter active"
+                data-filter="all">
+          All
+        </button>
+
+        <button class="video-filter"
+                data-filter="video">
+          Videos
+        </button>
+
+        <button class="video-filter"
+                data-filter="short">
+          Shorts
+        </button>
+
+      </div>
+
+      <div id="video-grid" class="video-grid">
+
+        <div class="loading-card">
+          Loading INNOVIXA videos...
+        </div>
+
+      </div>
+
     </section>
+
   </main>
-  <footer><a class="footer-brand" href="index.html">INNOVI<span class="cyan">XA</span></a><p>LEARN <b>•</b> BUILD <b>•</b> INNOVATE</p><div class="footer-links"><a href="https://www.youtube.com/@INNOVIXA" target="_blank" rel="noopener">YouTube</a><a href="https://whatsapp.com/channel/0029Vb9S3fqEFeXifUevcA2J" target="_blank" rel="noopener">WhatsApp Channel</a><a href="https://www.instagram.com/innovixaa/" target="_blank" rel="noopener">Instagram</a><a href="index.html">Home</a></div><small>© <span id="year"></span> INNOVIXA. Built for curious minds.</small></footer>
+
+  <footer>
+
+    <a class="footer-brand" href="index.html">
+      INNOVI<span class="cyan">XA</span>
+    </a>
+
+    <p>LEARN <b>•</b> BUILD <b>•</b> INNOVATE</p>
+
+    <div class="footer-links">
+
+      <a href="https://www.youtube.com/@INNOVIXA"
+         target="_blank"
+         rel="noopener">YouTube</a>
+
+      <a href="https://whatsapp.com/channel/0029Vb9S3fqEFeXifUevcA2J"
+         target="_blank"
+         rel="noopener">WhatsApp Channel</a>
+
+      <a href="https://www.instagram.com/innovixaa/"
+         target="_blank"
+         rel="noopener">Instagram</a>
+
+      <a href="index.html">Home</a>
+
+    </div>
+
+    <small>
+      © <span id="year"></span>
+      INNOVIXA. Built for curious minds.
+    </small>
+
+  </footer>
+
   <script src="script.js"></script>
+
 </body>
 </html>
