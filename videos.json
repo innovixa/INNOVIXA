@@ -4,6 +4,15 @@
     "title": "Test video",
     "published": "2026-11-24",
     "url": "https://www.youtube.com/watch?v=37oVTXIoUI8",
+    "shorts_url": "https://www.youtube.com/shorts/37oVTXIoUI8",
     "thumbnail": "https://i.ytimg.com/vi/37oVTXIoUI8/hqdefault.jpg"
+  },
+  {
+    "id": "UWLWEbH2rtM",
+    "title": "3d Printer #remix #edm #phonk #music #anime",
+    "published": "2026-11-24",
+    "url": "https://www.youtube.com/watch?v=UWLWEbH2rtM",
+    "shorts_url": "https://www.youtube.com/shorts/UWLWEbH2rtM",
+    "thumbnail": "https://i.ytimg.com/vi/UWLWEbH2rtM/hqdefault.jpg"
   }
 ]
